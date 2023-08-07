@@ -1,23 +1,9 @@
 # /bin/bash
 # Conditional Statements in Bash scripting 
-
-<<Block_comment
-a=10
-b=20
-if [$a -gt $b]
-then
-echo "condition is true"
-elif [$a -lt $b]
-then
-echo "condition is false"
-else
-echo "nothing is happning"
-fi
-Block_comment
-
+# Taking user-defined variables x & y
 read x
 read y
-
+# -gt = greater than, -lt = less than, -eq = equal to
 if [ $x -gt $y ]
 then
 echo X is greater than Y
