@@ -1,12 +1,18 @@
 #! /usr/bin/bash
 
-read -p "enter name of folder:" folderName
-read -p "enter number of folder:" foldernumber
+# with incremental names based on the input folder name.
 
+# Prompt the user to input the name of the folder to be created
+read -p "Enter the name of the folder: " folderName
+
+# Prompt the user to input the number of folders to be created
+read -p "Enter the number of folders: " folderNumber
+
+# Create the main folder with the specified name
 mkdir -p "$folderName"
-for((i=1; i<=$folderNumber; i++)); 
-do
-  mkdir -p "$folderName"_$i
-done
 
-
+# Start a loop to create the desired number of folders
+for ((i = 1; i <= $folderNumber; i++)); do
+    # Create a subfolder with an incremental name by appending _$i to the folderName
+    mkdir -p "${folderName}_$i"
+d
